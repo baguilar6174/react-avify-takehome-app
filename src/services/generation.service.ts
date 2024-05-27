@@ -8,10 +8,7 @@ export class GenerationService {
 			const { data } = await API.get<GenerationData>('/generation');
 			return data;
 		} catch (error) {
-			if (error instanceof AxiosError) {
-				console.log(error.response?.data);
-			}
-			console.log(error);
+			if (error instanceof AxiosError) console.log(error.response?.data);
 			throw new Error('Service error get');
 		}
 	};

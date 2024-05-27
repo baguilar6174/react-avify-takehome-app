@@ -2,7 +2,6 @@ export interface APIError<Data = Record<string, string>> {
 	// TODO: validate api error type
 	code: string | undefined;
 	message: string;
-	data: Data;
 }
 
 export interface GenerationData {

@@ -2,6 +2,7 @@ import { type StateCreator, create } from 'zustand';
 import { type APIError, type GenerationData } from '../types';
 import { devtools } from 'zustand/middleware';
 import { GenerationService } from '../services/generation.service';
+import { INTERNAL_ERROR } from '../lib/constants';
 
 interface State {
 	generationdata?: GenerationData;
@@ -18,7 +19,7 @@ type Store = State & Actions;
 const generationAPI: StateCreator<Store> = (set, get) => ({
 	generationdata: undefined,
 	isLoading: false,
-	fetchGenerationData: async () => {
+	fetchGenerationData: async (): Promise<void> => {
 		const state = get();
 		set({ ...state, isLoading: true });
 		try {
@@ -26,7 +27,7 @@ const generationAPI: StateCreator<Store> = (set, get) => ({
 			set({ isLoading: false, generationdata: { data } });
 		} catch (error) {
 			// TODO: errors control
-			set({ isLoading: false, generationdata: undefined, error: { code: 'dfdfd', data: { error: 'F' }, message: 'Errr' } });
+			set({ isLoading: false, generationdata: undefined, error: { code: INTERNAL_ERROR, message: 'Error trying to fetch data' } });
 		}
 	}
 });

@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --hot --progress"
+    "start": "webpack-dev-server --hot --progress",
+    "build": "webpack"
   },
   "dependencies": {
     "axios": "^1.7.2",
