@@ -75,3 +75,11 @@ An existing website that shows this data is here: https://gridwatch.co.uk/
    -  Link to the repository of the project.
    -  Any additional information you want to share with us.
 -  Github link to the project is required with the response email.
+
+---
+
+## Stay in touch
+
+- Website - [www.bryan-aguilar.com](https://www.bryan-aguilar.com/)
+- Medium - [baguilar6174](https://baguilar6174.medium.com/)
+- LinkedIn - [baguilar6174](https://www.linkedin.com/in/baguilar6174)
